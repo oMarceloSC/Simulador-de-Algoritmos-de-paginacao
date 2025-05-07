@@ -1,5 +1,7 @@
+import java.util.*;
+
 class simuladorLRU {
-    public static int simulador(List<Integer> pages, int frameCount) {
+    public static int simuladorLru(List<Integer> pages, int frameCount) {
         Set<Integer> frames = new HashSet<>();
         Map<Integer, Integer> recentUse = new HashMap<>();
         int faults = 0;
