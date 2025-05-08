@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class simulador() {
+public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,10 +15,10 @@ public class simulador() {
         System.out.println("Digite o tamanho da memoria: ");
         int frameCount = scanner.nextInt();
 
-        int fifoFaults = simuladorFIFO(pageSequence, frameCount);
-        int lruFaults = simuladorLRU(pageSequence, frameCount);
-        int clockFaults = simuladorClock(pageSequence, frameCount);
-        int agingFaults = simuladorAging(pageSequence, frameCount);
+        int fifoFaults = simuladorFIFO.simulate(pageSequence, frameCount);
+        int lruFaults = simuladorLRU.simulate(pageSequence, frameCount);
+        int clockFaults = simuladorClock.simulate(pageSequence, frameCount);
+        int agingFaults = simuladorAging.simulate(pageSequence, frameCount);
 
         System.out.println("Resultados:");
         System.out.println("FIFO: " + fifoFaults + " faltas de pagina");

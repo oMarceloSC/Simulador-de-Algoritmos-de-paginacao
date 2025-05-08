@@ -1,7 +1,7 @@
 import java.util.*;
 
-class simuladorLRU {
-    public static int simuladorLru(List<Integer> pages, int frameCount) {
+public class simuladorLRU {
+    public static int simulate(List<Integer> pages, int frameCount) {
         Set<Integer> frames = new HashSet<>();
         Map<Integer, Integer> recentUse = new HashMap<>();
         int faults = 0;
@@ -11,7 +11,7 @@ class simuladorLRU {
             if (!frames.contains(page)) {
                 faults++;
                 if (frames.size() == frameCount) {
-                    int lruPage = collections.min(recentUse.entrySet(), Map.Entry.comparingByValue()).getKey();
+                    int lruPage = Collections.min(recentUse.entrySet(), Map.Entry.comparingByValue()).getKey();
                     frames.remove(lruPage);
                     recentUse.remove(lruPage);
                 }

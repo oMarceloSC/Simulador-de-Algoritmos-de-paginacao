@@ -1,7 +1,7 @@
 import java.util.*;
 
-class simuladorFIFO {
-    public static int simuladorFifo(List<Integer> pages, int frameCount){
+public class simuladorFIFO {
+    public static int simulate(List<Integer> pages, int frameCount){
         Set<Integer> frames = new HashSet<>();
         Queue<Integer> queue = new LinkedList<>();
         int faults = 0;

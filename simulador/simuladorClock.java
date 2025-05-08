@@ -1,7 +1,7 @@
 import java.util.*;
 
-class simuladorClock {
-    public static int simuladorCLOCK(List<Integer> pages, int frameCount){
+public class simuladorClock {
+    public static int simulate(List<Integer> pages, int frameCount){
         int faults = 0;
         int[] frames = new int[frameCount];
         boolean[] referenceBits = new boolean[frameCount];
