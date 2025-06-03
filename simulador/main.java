@@ -4,7 +4,7 @@ public class main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite a sequencia de paginas: ");
+        System.out.println  ("Digite a sequencia de paginas: ");
         String input = scanner.nextLine();
         String[] pages = input.trim().split("\\s+");
         List<Integer> pageSequence = new ArrayList<>();
